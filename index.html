@@ -1,79 +1,89 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Undangan Pernikahan</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undangan Pernikahan</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- SPLASH SCREEN -->
-<div id="splash">
-  <div class="splash-card">
+<!-- TAB BUTTON -->
+<div class="tab-nav">
+  <button class="tab-btn active" onclick="openTab(0)">Undangan</button>
+  <button class="tab-btn" onclick="openTab(1)">Ayat</button>
+  <button class="tab-btn" onclick="openTab(2)">Acara</button>
+</div>
 
-    <!-- FOTO SPLASH -->
-    <div class="splash-foto">
-      <img src="splash.jpg" alt="Foto Pengantin">
+<!-- TAB CONTENT -->
+<div class="tab-container">
+
+  <!-- TAB 1 -->
+  <div class="tab-content active">
+    <h2 class="yth-text">The Wedding Of</h2>
+    <div class="circle">M / N</div>
+    <p class="yth-text">15 • 01 • 2026</p>
+<section class="tab active tab-center" id="tab1">
+
+  <div class="tab1-inner">
+     <p class="yth-text">Kepada Yth.</p>
+<div class="guest-shape yth-text">
+      <span id="namaTamu">Tamu Undangan</span>
+    </div> 
+<br>
+        <p class="yth-text">Merupakan suatu kehormatan <br>Bapak/Ibu/Saudara/I berkenanhadir untuk memberikan do'a restu kepada kedua mempelai</p>
+
+
+
+  </div>
+
+</section>
+  </div>
+
+  <!-- TAB 2 -->
+  <div class="tab-content">
+    <div class="ayat-box">
+      <h1 class="nama">Mas'ud Syafei & Neni Afifah</h1>
+      <span class="surah">Surah Ar-Rum : 21</span>
+
+      <p class="ayat">
+        Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan
+        untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya,
+        dan Dia menjadikan di antaramu rasa kasih dan sayang.
+        <br><br>
+        Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah)
+        bagi kaum yang berpikir.
+      </p>
+    </div>
+  </div>
+<!-- TAB 3 -->
+<div class="tab-content">
+  <div class="acara-box">
+
+    <h2 class="judul-acara">Akad Nikah</h2>
+    <p class="detail">
+      🗓 Minggu, 15 Februari 2026<br>
+      ⏰  13.00WITA - 13.30 WITA
+      <br>📍 Bumi Nurmita Mas 2
+Moncongloe Bulu, Kec. Moncong Loe, Kabupaten Maros, Sulawesi Selatan
+    </p>
+
+    <h2 class="judul-acara">Resepsi</h2>
+    <p class="detail">
+      🗓 Minggu, 15 Januari 2026<br>
+      ⏰ 14.00WITA - sampai selesai<br>
+      📍 Bumi Nurmita Mas 2
+Moncongloe Bulu, Kec. Moncong Loe, Kabupaten Maros, Sulawesi Selatan
+    </p>
+
+    <div class="btn-group">
+      <a href="https://maps.app.goo.gl/D7rWHpUnYKDPjbtT9" target="_blank" class="btn-gold">Lihat Lokasi</a>
+      <a href="https://wa.me/6282190621571?text=Saya%20akan%20hadir" target="_blank" class="btn-outline">Konfirmasi Hadir</a>
     </div>
 
-    <p class="splash-text">Undangan Pernikahan</p>
-    <h2>Mas'ud Syafei & Neni Afifa</h2>
-
-    <button onclick="bukaUndangan()"> Buka Undangan</button>
   </div>
 </div>
-<!-- BUNGA -->
-<div class="bunga-container"></div>
-
-<!-- CARD UNDANGAN -->
-<div class="container">
-
-  <h1>Mas'ud Syafei  Neni Afifa</h1>
-  <p class="tanggal">20 Februari 2026</p>
-
-
-  <!-- FOTO -->
-  <div class="foto">
-    <img src="nikah.jpg" alt="Foto Pengantin">
-  </div>
-   <p class="nama-tamu">
-    Kepada Yth.<br>
-    <div class="nama-box">
-    <span id="namaTamu">Tamu Undangan</span>
-    </div>
-  </p>
-  <p>Merupakan suatu kehormatan Bapak/Ibu/Saudara/I berkenan hadir untuk memberikan do'a restu kepada kedua mempelai</p>
-    <br>
-  <!-- INFO -->
-  <div class="info">
-    <p><strong>Akad & Resepsi</strong></p>
-    <p>Bumi Nurmita Mas 2<br>Moncongloe Bulu, Kec. Moncong Loe, Kabupaten Maros, Sulawesi Selatan</p>
-  </div>
-    <!-- COUNTDOWN -->
-  <div class="countdown">
-    <div class="cd-box">
-      <span id="hari">0</span>
-      <small>Hari</small>
-    </div>
-    <div class="cd-box">
-      <span id="jam">0</span>
-      <small>Jam</small>
-    </div>
-    <div class="cd-box">
-      <span id="menit">0</span>
-      <small>Menit</small>
-    </div>
-    <div class="cd-box">
-      <span id="detik">0</span>
-      <small>Detik</small>
-    </div>
-  </div>
-  <!-- TOMBOL -->
-  <div class="tombol-aksi">
-    <button class="btn hadir" onclick="kirimWA()">💌 Konfirmasi</button>
-    <button class="btn lokasi" onclick="lihatLokasi()">📍 Lokasi</button>
-  </div>
 </div>
 
 <script src="script.js"></script>
