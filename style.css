@@ -3,7 +3,42 @@ body{
   font-family:'Playfair Display', serif;
   background:#f7f4ee;
 }
+/* Container bunga */
+.bunga-container{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none; /* biar klik tetap bisa */
+  overflow:hidden;
+  z-index:1; /* pastikan di belakang card */
+}
 
+/* bunga */
+.bunga{
+  position:absolute;
+  font-size:24px;
+  opacity:0.9;
+  user-select:none;
+  pointer-events:none;
+  will-change: transform, opacity;
+  animation-name:jatuh;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* animasi jatuh */
+@keyframes jatuh{
+  0%{ transform: translateY(-50px) rotate(0deg); opacity:1;}
+  100%{ transform: translateY(110vh) rotate(360deg); opacity:0.7;}
+}
+
+/* Card tetap di atas */
+.card{
+  position:relative;
+  z-index:2;
+}
 .yth-text{
   text-align:center;
   font-size:14px;
