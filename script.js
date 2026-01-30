@@ -24,3 +24,32 @@ function openTab(index){
   tabs[index].classList.add('active');
   btns[index].classList.add('active');
 }
+const container = document.querySelector('.bunga-container');
+const bungaCount = 15; // jumlah bunga
+
+for(let i=0; i<bungaCount; i++){
+  const bunga = document.createElement('div');
+  bunga.classList.add('bunga');
+  bunga.style.left = Math.random() * 100 + 'vw';
+  bunga.style.top = -50 + 'px'; // mulai di atas layar
+  bunga.style.animationDuration = 5 + Math.random()*5 + 's'; // durasi random
+  bunga.style.animationDelay = Math.random()*5 + 's';
+  container.appendChild(bunga);
+}
+
+document.head.appendChild(style);
+window.addEventListener('load', () => {
+    const bgMusic = document.getElementById('bgMusic');
+    
+    // Coba play otomatis
+    const playPromise = bgMusic.play();
+    
+    if (playPromise !== undefined) {
+        playPromise.then(() => {
+            console.log('Musik mulai otomatis');
+        }).catch(error => {
+            console.log('Autoplay diblokir, menunggu interaksi user');
+        });
+    }
+    
+});
