@@ -52,7 +52,7 @@ function buatBunga(){
 /* TOMBOL */
 function kirimWA(){
   window.open(
-    "https://wa.me/6281234567890?text=Saya%20akan%20hadir",
+    "https://wa.me/6287772622126?text=Saya%20akan%20hadir",
     "_blank"
   );
 }
