@@ -48,7 +48,23 @@ function buatBunga(){
   document.querySelector(".bunga-container").appendChild(bunga);
   setTimeout(()=>{ bunga.remove(); },7000);
 }
+/* ===== NAMA TAMU DARI URL ===== */
+const params = new URLSearchParams(window.location.search);
+const nama = params.get("to");
 
+if (nama) {
+  document.getElementById("namaTamu").innerText =
+    decodeURIComponent(nama.replace(/\+/g, " "));
+}
+function bukaUndangan(){
+  const splash = document.getElementById("splash");
+  splash.style.opacity = "0";
+  splash.style.transition = "opacity 0.8s ease";
+
+  setTimeout(() => {
+    splash.style.display = "none";
+  }, 800);
+}
 /* TOMBOL */
 function kirimWA(){
   window.open(
