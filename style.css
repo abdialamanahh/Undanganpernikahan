@@ -42,7 +42,7 @@ body{
   text-align:center;
   font-size:10px;
   color:#8a6a3f;
-  margin-bottom:10px;
+  margin-bottom:16px;
   font-weight:600;
   z-index:3;
   position:relative; /* pastikan di atas bunga */
@@ -50,7 +50,7 @@ body{
 
 .countdown span{
   display:inline-block;
-  min-width:4px;
+  min-width:40px;
 }
 .yth-text{
   text-align:center;
