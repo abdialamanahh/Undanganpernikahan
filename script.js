@@ -1,5 +1,29 @@
 document.addEventListener('DOMContentLoaded', function(){
 
+  // Ambil nama dari URL
+  const params = new URLSearchParams(window.location.search);
+  const nama = params.get("tamu");
+  document.getElementById("namaTamu").textContent = nama ? decodeURIComponent(nama.replace(/\+/g,' ')) : "Tamu Undangan";
+
+  const splash = document.getElementById('splashScreen');
+  const openBtn = document.getElementById('openBtn');
+  const tab1 = document.getElementById('tab1');
+
+  // Buka splash otomatis setelah 3 detik
+  setTimeout(()=> {
+    splash.style.display = 'none';
+    tab1.style.display = 'block';
+  }, 3000); // ganti 3000 = 3 detik
+
+  // Opsional: buka manual jika klik tombol
+  openBtn.addEventListener('click', ()=>{
+    splash.style.display = 'none';
+    tab1.style.display = 'block';
+  });
+
+});
+document.addEventListener('DOMContentLoaded', function(){
+
   const container = document.querySelector('.bunga-container');
   const bungaCount = 20; // jumlah bunga
 
