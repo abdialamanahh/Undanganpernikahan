@@ -85,7 +85,21 @@ Moncongloe Bulu, Kec. Moncong Loe, Kabupaten Maros, Sulawesi Selatan
   </div>
 </div>
 </div>
+<script>
+(function(){
+  // ambil parameter URL
+  const params = new URLSearchParams(window.location.search);
+  const nama = params.get("tamu");
 
+  // ambil elemen namaTamu
+  const el = document.getElementById("namaTamu");
+
+  // set nama
+  if(el){
+    el.textContent = nama ? decodeURIComponent(nama.replace(/\+/g,' ')) : "Tamu Undangan";
+  }
+})();
+</script>
 <script src="script.js"></script>
 </body>
 </html>
