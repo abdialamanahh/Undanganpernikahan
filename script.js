@@ -15,7 +15,7 @@ function bukaUndangan(){
 }
 
 /* ===== COUNTDOWN (FORMAT AMAN ANDROID) ===== */
-const tanggalNikah = new Date(2026,1,20,8,0,0).getTime();
+const tanggalNikah = new Date(2026,1,15,10,0,0).getTime();
 
 setInterval(()=>{
   const sekarang = new Date().getTime();

@@ -11,26 +11,46 @@
 <!-- SPLASH SCREEN -->
 <div id="splash">
   <div class="splash-card">
+
+    <!-- FOTO SPLASH -->
+    <div class="splash-foto">
+      <img src="splash.jpg" alt="Foto Pengantin">
+    </div>
+
     <p class="splash-text">Undangan Pernikahan</p>
-    <h2>Ardi & Sinta</h2>
-    <button onclick="bukaUndangan()">💌 Buka Undangan</button>
+    <h2>Mas'ud Syafei & Neni Afifa</h2>
+
+    <button onclick="bukaUndangan()"> Buka Undangan</button>
   </div>
 </div>
-
 <!-- BUNGA -->
 <div class="bunga-container"></div>
 
 <!-- CARD UNDANGAN -->
 <div class="container">
-  <p class="nama-tamu">
-    Kepada Yth.<br>
-    <span id="namaTamu">Tamu Undangan</span>
-  </p>
 
-  <h1>Ardi & Sinta</h1>
+  <h1>Mas'ud Syafei  Neni Afifa</h1>
   <p class="tanggal">20 Februari 2026</p>
 
-  <!-- COUNTDOWN -->
+
+  <!-- FOTO -->
+  <div class="foto">
+    <img src="nikah.jpg" alt="Foto Pengantin">
+  </div>
+   <p class="nama-tamu">
+    Kepada Yth.<br>
+    <div class="nama-box">
+    <span id="namaTamu">Tamu Undangan</span>
+    </div>
+  </p>
+  <p>Merupakan suatu kehormatan Bapak/Ibu/Saudara/I berkenan hadir untuk memberikan do'a restu kepada kedua mempelai</p>
+    <br>
+  <!-- INFO -->
+  <div class="info">
+    <p><strong>Akad & Resepsi</strong></p>
+    <p>Bumi Nurmita Mas 2<br>Moncongloe Bulu, Kec. Moncong Loe, Kabupaten Maros, Sulawesi Selatan</p>
+  </div>
+    <!-- COUNTDOWN -->
   <div class="countdown">
     <div class="cd-box">
       <span id="hari">0</span>
@@ -49,18 +69,6 @@
       <small>Detik</small>
     </div>
   </div>
-
-  <!-- FOTO -->
-  <div class="foto">
-    <img src="nikah.jpg" alt="Foto Pengantin">
-  </div>
-
-  <!-- INFO -->
-  <div class="info">
-    <p><strong>Akad & Resepsi</strong></p>
-    <p>Gedung Serbaguna<br>Jakarta</p>
-  </div>
-
   <!-- TOMBOL -->
   <div class="tombol-aksi">
     <button class="btn hadir" onclick="kirimWA()">💌 Konfirmasi</button>

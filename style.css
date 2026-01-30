@@ -12,7 +12,36 @@ body{
   justify-content:center;
   align-items:center;
 }
+/* FOTO SPLASH */
+.splash-foto{
+  width:220px;
+  height:220px;
+  margin:0 auto 15px;
+  border-radius:25px;        /* INI YANG BIKIN TIDAK LANCIP */
+  overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
 
+.splash-foto img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+/* NAMA TAMU SHAPE */
+.nama-box{
+  display:inline-block;          /* INI KUNCI: mengikuti panjang nama */
+  padding:10px 20px;
+  margin:10px auto 15px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.7);
+  box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+.nama-box span{
+  font-size:18px;
+  font-weight:bold;
+  white-space:nowrap;            /* nama tidak turun baris */
+}
 /* SPLASH */
 #splash{
   position:fixed;
