@@ -50,5 +50,5 @@ function kirimWA(){
   window.open("https://wa.me/6281234567890","_blank");
 }
 function lihatLokasi(){
-  window.open("https://maps.google.com","_blank");
+  window.open("https://maps.app.goo.gl/D7rWHpUnYKDPjbtT9","_blank");
 }
