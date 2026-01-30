@@ -57,5 +57,5 @@ function kirimWA(){
   );
 }
 function lihatLokasi(){
-  window.open("https://maps.google.com","_blank");
+  window.open("https://maps.app.goo.gl/BarFV2sfD1BhZrhx5","_blank");
 }
